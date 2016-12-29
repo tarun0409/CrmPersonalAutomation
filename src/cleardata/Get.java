@@ -2,48 +2,79 @@ package cleardata;
 
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
-import java.util.logging.Level;
-import java.util.logging.Logger;
+import java.util.ArrayList;
 
 import org.apache.http.HttpResponse;
 import org.apache.http.client.HttpClient;
 import org.apache.http.client.methods.HttpGet;
 import org.apache.http.impl.client.HttpClientBuilder;
+import org.apache.log4j.LogManager;
+import org.apache.log4j.Logger;
 import org.json.JSONArray;
 import org.json.JSONObject;
 
 public class Get {
-	private static final Logger LOGGER = Logger.getLogger( Get.class.getName() );
-	String module;
+	static final Logger LOGGER = LogManager.getLogger(Get.class.getName());
 	String authtoken;
 	String port;
-	JSONObject properties;
 	public Get(JSONObject properties) throws Exception
 	{
-		this.module = properties.getString("module");
 		this.authtoken = properties.getString("authtoken");
 		this.port = properties.getString("port");
-		this.properties = properties;
 	}
-	public JSONObject getData() throws Exception
+	public ArrayList<String> getModuleList() throws Exception
 	{
-		System.out.println("\n\n\n************Getting all data from "+module+"\n\n\n");
-		LOGGER.log(Level.FINE,"\n\n\n************Getting all data from "+module+"\n\n\n");
+		String url = "http://localhost:"+port+"/crm/v2/settings/modules";
+
+		HttpClient client = HttpClientBuilder.create().build();
+		HttpGet request = new HttpGet(url);
+		request.addHeader("Authorization", "Zoho-authtoken "+authtoken);
+		HttpResponse response = client.execute(request);
+		LOGGER.debug("Response = "+response);
+		int statusCode = response.getStatusLine().getStatusCode();
+		ArrayList<String> moduleList = new ArrayList<String>();
+		if(statusCode==200)
+		{
+			LOGGER.debug("Module data received successfully!!!!");
+			BufferedReader rd = new BufferedReader(
+					new InputStreamReader(response.getEntity().getContent()));
+			StringBuffer result = new StringBuffer();
+			String line = "";
+			while ((line = rd.readLine()) != null) {
+				result.append(line);
+			}
+			JSONObject resultObj = new JSONObject(result.toString());
+			JSONArray modulesArray = resultObj.getJSONArray("modules");
+			int length = modulesArray.length();
+			for(int i=0; i<length; i++)
+			{
+				JSONObject module = modulesArray.getJSONObject(i);
+				boolean editable = module.getBoolean("editable");
+				boolean deletable = module.getBoolean("deletable");
+				if(editable && deletable)
+				{
+					String moduleName = module.getString("api_name");
+					moduleList.add(moduleName);
+				}
+			}
+		}
+		return moduleList;
+	}
+	public JSONObject getData(String module) throws Exception
+	{
+		LOGGER.debug("Getting all data from "+module+"\n\n\n");
 		String url = "http://localhost:"+port+"/crm/v2/"+module;
 
 		HttpClient client = HttpClientBuilder.create().build();
 		HttpGet request = new HttpGet(url);
 
-		// add request header
 		request.addHeader("Authorization", "Zoho-authtoken "+authtoken);
 		HttpResponse response = client.execute(request);
-		System.out.println("Response = "+response);
-		LOGGER.log(Level.FINE, "Response = "+response);
+		LOGGER.debug("Response = "+response);
 		int statusCode = response.getStatusLine().getStatusCode();
 		if(statusCode==200)
 		{
-			System.out.println("Data recived successfully!!!!");
-			LOGGER.log(Level.FINE,"Data recived successfully!!!!");
+			LOGGER.debug("Data received successfully!!!!");
 			BufferedReader rd = new BufferedReader(
 					new InputStreamReader(response.getEntity().getContent()));
 			StringBuffer result = new StringBuffer();
@@ -56,8 +87,7 @@ public class Get {
 		}
 		else
 		{
-			System.out.println("Something went wrong while receiving data");
-			LOGGER.log(Level.FINE, "Something went wrong while receiving data");
+			LOGGER.error("Something went wrong while receiving data");
 		}
 		JSONObject resultObj = new JSONObject();
 		resultObj.put("data", new JSONArray());

@@ -13,5 +13,43 @@
 	<classpathentry kind="lib" path="/Users/tarun-4522/Documents/jars/httpcomponents-client-4.5.2/lib/httpmime-4.5.2.jar"/>
 	<classpathentry kind="lib" path="/Users/tarun-4522/Documents/jars/httpcomponents-client-4.5.2/lib/jna-4.1.0.jar"/>
 	<classpathentry kind="lib" path="/Users/tarun-4522/Documents/jars/httpcomponents-client-4.5.2/lib/jna-platform-4.1.0.jar"/>
+	<classpathentry kind="lib" path="/Users/tarun-4522/Documents/jars/apache-log4j-2.7-bin/log4j-1.2-api-2.7-javadoc.jar"/>
+	<classpathentry kind="lib" path="/Users/tarun-4522/Documents/jars/apache-log4j-2.7-bin/log4j-1.2-api-2.7-sources.jar"/>
+	<classpathentry kind="lib" path="/Users/tarun-4522/Documents/jars/apache-log4j-2.7-bin/log4j-1.2-api-2.7.jar"/>
+	<classpathentry kind="lib" path="/Users/tarun-4522/Documents/jars/apache-log4j-2.7-bin/log4j-api-2.7-javadoc.jar"/>
+	<classpathentry kind="lib" path="/Users/tarun-4522/Documents/jars/apache-log4j-2.7-bin/log4j-api-2.7-sources.jar"/>
+	<classpathentry kind="lib" path="/Users/tarun-4522/Documents/jars/apache-log4j-2.7-bin/log4j-api-2.7.jar"/>
+	<classpathentry kind="lib" path="/Users/tarun-4522/Documents/jars/apache-log4j-2.7-bin/log4j-api-scala_2.10-2.7-sources.jar"/>
+	<classpathentry kind="lib" path="/Users/tarun-4522/Documents/jars/apache-log4j-2.7-bin/log4j-api-scala_2.10-2.7.jar"/>
+	<classpathentry kind="lib" path="/Users/tarun-4522/Documents/jars/apache-log4j-2.7-bin/log4j-api-scala_2.11-2.7-sources.jar"/>
+	<classpathentry kind="lib" path="/Users/tarun-4522/Documents/jars/apache-log4j-2.7-bin/log4j-api-scala_2.11-2.7.jar"/>
+	<classpathentry kind="lib" path="/Users/tarun-4522/Documents/jars/apache-log4j-2.7-bin/log4j-core-2.7-javadoc.jar"/>
+	<classpathentry kind="lib" path="/Users/tarun-4522/Documents/jars/apache-log4j-2.7-bin/log4j-core-2.7-sources.jar"/>
+	<classpathentry kind="lib" path="/Users/tarun-4522/Documents/jars/apache-log4j-2.7-bin/log4j-core-2.7-tests.jar"/>
+	<classpathentry kind="lib" path="/Users/tarun-4522/Documents/jars/apache-log4j-2.7-bin/log4j-core-2.7.jar"/>
+	<classpathentry kind="lib" path="/Users/tarun-4522/Documents/jars/apache-log4j-2.7-bin/log4j-flume-ng-2.7-javadoc.jar"/>
+	<classpathentry kind="lib" path="/Users/tarun-4522/Documents/jars/apache-log4j-2.7-bin/log4j-flume-ng-2.7-sources.jar"/>
+	<classpathentry kind="lib" path="/Users/tarun-4522/Documents/jars/apache-log4j-2.7-bin/log4j-flume-ng-2.7.jar"/>
+	<classpathentry kind="lib" path="/Users/tarun-4522/Documents/jars/apache-log4j-2.7-bin/log4j-iostreams-2.7-javadoc.jar"/>
+	<classpathentry kind="lib" path="/Users/tarun-4522/Documents/jars/apache-log4j-2.7-bin/log4j-iostreams-2.7-sources.jar"/>
+	<classpathentry kind="lib" path="/Users/tarun-4522/Documents/jars/apache-log4j-2.7-bin/log4j-iostreams-2.7.jar"/>
+	<classpathentry kind="lib" path="/Users/tarun-4522/Documents/jars/apache-log4j-2.7-bin/log4j-jcl-2.7-javadoc.jar"/>
+	<classpathentry kind="lib" path="/Users/tarun-4522/Documents/jars/apache-log4j-2.7-bin/log4j-jcl-2.7-sources.jar"/>
+	<classpathentry kind="lib" path="/Users/tarun-4522/Documents/jars/apache-log4j-2.7-bin/log4j-jcl-2.7.jar"/>
+	<classpathentry kind="lib" path="/Users/tarun-4522/Documents/jars/apache-log4j-2.7-bin/log4j-jmx-gui-2.7-javadoc.jar"/>
+	<classpathentry kind="lib" path="/Users/tarun-4522/Documents/jars/apache-log4j-2.7-bin/log4j-jmx-gui-2.7-sources.jar"/>
+	<classpathentry kind="lib" path="/Users/tarun-4522/Documents/jars/apache-log4j-2.7-bin/log4j-jmx-gui-2.7.jar"/>
+	<classpathentry kind="lib" path="/Users/tarun-4522/Documents/jars/apache-log4j-2.7-bin/log4j-jul-2.7-javadoc.jar"/>
+	<classpathentry kind="lib" path="/Users/tarun-4522/Documents/jars/apache-log4j-2.7-bin/log4j-jul-2.7-sources.jar"/>
+	<classpathentry kind="lib" path="/Users/tarun-4522/Documents/jars/apache-log4j-2.7-bin/log4j-jul-2.7.jar"/>
+	<classpathentry kind="lib" path="/Users/tarun-4522/Documents/jars/apache-log4j-2.7-bin/log4j-nosql-2.7-javadoc.jar"/>
+	<classpathentry kind="lib" path="/Users/tarun-4522/Documents/jars/apache-log4j-2.7-bin/log4j-nosql-2.7-sources.jar"/>
+	<classpathentry kind="lib" path="/Users/tarun-4522/Documents/jars/apache-log4j-2.7-bin/log4j-nosql-2.7.jar"/>
+	<classpathentry kind="lib" path="/Users/tarun-4522/Documents/jars/apache-log4j-2.7-bin/log4j-taglib-2.7-javadoc.jar"/>
+	<classpathentry kind="lib" path="/Users/tarun-4522/Documents/jars/apache-log4j-2.7-bin/log4j-taglib-2.7-sources.jar"/>
+	<classpathentry kind="lib" path="/Users/tarun-4522/Documents/jars/apache-log4j-2.7-bin/log4j-taglib-2.7.jar"/>
+	<classpathentry kind="lib" path="/Users/tarun-4522/Documents/jars/apache-log4j-2.7-bin/log4j-web-2.7-javadoc.jar"/>
+	<classpathentry kind="lib" path="/Users/tarun-4522/Documents/jars/apache-log4j-2.7-bin/log4j-web-2.7-sources.jar"/>
+	<classpathentry kind="lib" path="/Users/tarun-4522/Documents/jars/apache-log4j-2.7-bin/log4j-web-2.7.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>
